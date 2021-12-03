@@ -1,0 +1,148 @@
+.wrapper {
+  width: min(90%, 33.5rem);
+  margin: 9.5rem 0 5rem;
+  position: relative;
+
+  .container {
+    background-color: #fff;
+    padding: 8.25rem 1.5rem 3rem;
+    position: relative;
+    border-radius: 23px;
+    // Apply box-shadow only at the bottom
+    box-shadow: 0 1rem 2.5rem -1rem color(color-shadow);
+
+    //Images
+    &__woman-illustration {
+      position: absolute;
+      top: -110px;
+      left: 50%;
+      transform: translateX(-55%);
+    }
+    &__bg-pattern {
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__illustration-box {
+      display: none;
+      position: absolute;
+    }
+
+    //Title
+    &__title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2.68rem;
+      color: color(color-bold);
+    }
+
+    //Questions
+    .question {
+      padding: 1.125rem 0;
+      border-bottom: 1px solid color(color-dividers);
+
+      //JAVASCRIPT
+      &.active p {
+        transition: all 0.6s ease;
+        height: auto;
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      //JAVASCRIPT
+      &.active img {
+        transform: rotate(180deg);
+      }
+
+      //JAVASCRIPT
+      &.active h2 {
+        font-weight: bold;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+      &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        & h2 {
+          font-size: 0.8125rem;
+          font-weight: 400;
+          margin-bottom: 0.75rem;
+          transition: color 0.5s ease;
+
+          &:hover {
+            color: color(color-text-on-hover);
+          }
+        }
+      }
+
+      //Arrow Icon
+      &__arrow {
+        width: 8px;
+        height: 4px;
+      }
+
+      //Answers
+      &__answer {
+        font-size: 0.75rem;
+        color: color(color-text);
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        transform: translateY(50%);
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+//**************** MEDIA min-width: 950px **********
+@media screen and (min-width: $breakpoint-tablet) {
+  .wrapper {
+    width: min(90%, 57.5rem); //520px
+    .container {
+      padding: 4.06rem 5.94rem 5.18rem;
+      overflow: hidden;
+      height: 642px;
+
+      // Title and answers
+      .question,
+      &__title {
+        max-width: 21.875rem; //350px
+        margin-left: auto;
+      }
+
+      &__title {
+        text-align: left;
+      }
+
+      //Images
+      &__woman-illustration {
+        top: 50%;
+        left: -95px;
+        transform: translateY(-50%);
+      }
+      &__bg-pattern {
+        top: -230px;
+        left: -590px;
+        transform: translateY(0);
+      }
+      &__illustration-box {
+        display: block;
+        top: 43%;
+        left: -100px;
+        z-index: 2;
+      }
+
+      .question {
+        &__title h2 {
+          font-size: 0.875rem; //14px
+        }
+      }
+    }
+  }
+}

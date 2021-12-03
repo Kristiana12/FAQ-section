@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="dist/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main class="wrapper">
+      <!-- Shows when min-width:950px! -->
+      <!-- Outside .container to prevet overflow-hidden from hiding it -->
+      <img
+        src="dist/images/illustration-box-desktop.svg"
+        alt=""
+        aria-hidden="true"
+        class="container__illustration-box"
+      />
+
+      <div class="container">
+        <!-- IMAGES -->
+        <!-- Bg pattern -->
+        <picture>
+          <source
+            media="(min-width: 950px)"
+            srcset="dist/images/bg-pattern-desktop.svg"
+          />
+          <img
+            src="dist/images/bg-pattern-mobile.svg"
+            alt=""
+            aria-hidden="true"
+            class="container__bg-pattern"
+          />
+        </picture>
+        <!-- Woman illustration -->
+        <picture>
+          <source
+            media="(min-width:950px)"
+            srcset="dist/images/illustration-woman-online-desktop.svg"
+          />
+          <img
+            src="dist/images/illustration-woman-online-mobile.svg"
+            alt=""
+            aria-hidden="true"
+            class="container__woman-illustration"
+          />
+        </picture>
+
+        <h1 class="container__title">FAQ</h1>
+        <div class="question">
+          <div class="question__title">
+            <h2>How many team members can I invite?</h2>
+            <img
+              src="dist/images/icon-arrow-down.svg"
+              alt=""
+              aria-hidden="true"
+              class="question__arrow"
+            />
+          </div>
+          <p class="question__answer">
+            You can invite up to 2 additional users on the Free plan. There is
+            no limit on team members for the Premium plan.
+          </p>
+        </div>
+        <div class="question active">
+          <div class="question__title">
+            <h2 class="active">What is the maximum file upload size?</h2>
+            <img
+              src="dist/images/icon-arrow-down.svg"
+              alt=""
+              aria-hidden="true"
+              class="question__arrow"
+            />
+          </div>
+          <p class="question__answer">
+            No more than 2GB. All files in your account must fit your allotted
+            storage space.
+          </p>
+        </div>
+        <div class="question">
+          <div class="question__title">
+            <h2>How do I reset my password?</h2>
+            <img
+              src="dist/images/icon-arrow-down.svg"
+              alt=""
+              aria-hidden="true"
+              class="question__arrow"
+            />
+          </div>
+          <p class="question__answer">
+            Click “Forgot password” from the login page or “Change password”
+            from your profile page. A reset link will be emailed to you.
+          </p>
+        </div>
+        <div class="question">
+          <div class="question__title">
+            <h2>Can I cancel my subscription?</h2>
+            <img
+              src="dist/images/icon-arrow-down.svg"
+              alt=""
+              aria-hidden="true"
+              class="question__arrow"
+            />
+          </div>
+          <p class="question__answer">
+            Yes! Send us a message and we’ll process your request no questions
+            asked.
+          </p>
+        </div>
+        <div class="question">
+          <div class="question__title">
+            <h2>Do you provide additional support?</h2>
+            <img
+              src="dist/images/icon-arrow-down.svg"
+              alt=""
+              aria-hidden="true"
+              class="question__arrow"
+            />
+          </div>
+          <p class="question__answer">
+            Chat and email support is available 24/7. Phone lines are open
+            during normal business hours.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
