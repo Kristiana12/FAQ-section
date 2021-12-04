@@ -39,7 +39,7 @@
 
     //Questions
     .question {
-      padding: 1.125rem 0;
+      padding: 1rem 0;
       border-bottom: 1px solid color(color-dividers);
 
       //JAVASCRIPT
@@ -102,12 +102,17 @@
 
 //**************** MEDIA min-width: 950px **********
 @media screen and (min-width: $breakpoint-tablet) {
+  body {
+    height: 100vh;
+  }
+
   .wrapper {
     width: min(90%, 57.5rem); //520px
+    margin: 0;
     .container {
-      padding: 4.06rem 5.94rem 5.18rem;
+      padding: 3.5rem 5.94rem 5.18rem;
       overflow: hidden;
-      height: 642px;
+      height: 562px;
 
       // Title and answers
       .question,
@@ -118,6 +123,7 @@
 
       &__title {
         text-align: left;
+        margin-bottom: 2rem;
       }
 
       //Images
@@ -134,7 +140,7 @@
       &__illustration-box {
         display: block;
         top: 43%;
-        left: -100px;
+        left: -95px;
         z-index: 2;
       }
 
